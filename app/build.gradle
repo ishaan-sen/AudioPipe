@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.asdfg.soundmaster'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.asdfg.soundmaster"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        // NDK disabled for now
+        // ndk {
+        //     abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+        // }
+
+        // externalNativeBuild {
+        //     cmake {
+        //         cppFlags '-std=c++17'
+        //     }
+        // }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    // Native build disabled until BoringSSL is properly integrated
+    // For now, pairing must be done via Shizuku first, then this app can use the connection
+    // externalNativeBuild {
+    //     cmake {
+    //         path file("src/main/jni/CMakeLists.txt")
+    //         version "3.22.1"
+    //     }
+    // }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.media:media:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    
+    // Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+    
+    // BouncyCastle for RSA key generation
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.77'
+    implementation 'org.bouncycastle:bcpkix-jdk18on:1.77'
+}

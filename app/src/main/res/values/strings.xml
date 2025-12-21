@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioPipe</string>
+    
+    <!-- Setup -->
+    <string name="setup_title">ADB Setup</string>
+    <string name="setup_instructions">Enable Wireless Debugging in Developer Options, then enter the pairing code below.</string>
+    <string name="pairing_code_hint">Pairing Code</string>
+    <string name="pair_button">Pair</string>
+    <string name="pairing_success">Pairing successful!</string>
+    <string name="pairing_failed">Pairing failed. Check the code and try again.</string>
+    <string name="connection_status">Connection Status</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    
+    <!-- Main UI -->
+    <string name="select_app">Select App</string>
+    <string name="select_output">Output Device</string>
+    <string name="volume">Volume</string>
+    <string name="balance">Balance</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="add_app">+ Add App</string>
+    <string name="no_apps_selected">No apps selected</string>
+    
+    <!-- Service -->
+    <string name="service_notification_title">SoundMaster Active</string>
+    <string name="service_notification_text">Routing audio for %d app(s)</string>
+    
+    <!-- Errors -->
+    <string name="error_no_adb">ADB not connected. Please set up wireless debugging.</string>
+    <string name="error_permission">Permission denied. Please grant the required permissions.</string>
+</resources>
