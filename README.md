@@ -1,4 +1,4 @@
-# AudioPipe (SoundMaster)
+# AudioPipe
 
 A powerful Android audio routing utility that **captures audio from individual apps** and routes it to **specific output devices** (like Bluetooth headphones or the speaker), effectively bypassing the system's default audio routing.
 
